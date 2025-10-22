@@ -1,0 +1,17 @@
+# Node modules
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment variables
+.env
+
+# IDE / editor files
+.vscode/
+.idea/
