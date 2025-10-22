@@ -1,6 +1,6 @@
 # Node modules
-node_modules/
-package-lock.json
+day1/node_modules/
+day1/package-lock.json
 
 # Build output
 dist/
