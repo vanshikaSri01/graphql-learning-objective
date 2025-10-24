@@ -17,7 +17,7 @@ build/
 .idea/
 
 # Maven
-/target/
+target/
 
 HELP.md
 .mvn/wrapper/maven-wrapper.jar
