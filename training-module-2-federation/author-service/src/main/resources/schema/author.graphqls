@@ -1,0 +1,23 @@
+extend schema
+  @link(
+    url: "https://specs.apollo.dev/federation/v2.3",
+    import: ["@key", "@external"]
+  )
+
+type Author @key(fields: "id") {
+  id: ID!
+  name: String
+}
+
+# 👇 Stub of Book for federation recognition
+type Book @key(fields: "id") {
+  id: ID!
+}
+
+extend type Book {
+  author: Author
+}
+
+type Query {
+  authors: [Author]
+}

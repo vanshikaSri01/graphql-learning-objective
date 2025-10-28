@@ -1,0 +1,17 @@
+extend schema
+  @link(
+    url: "https://specs.apollo.dev/federation/v2.3",
+    import: ["@key"]
+  )
+
+type Book @key(fields: "id") {
+  id: ID!
+  title: String
+  publishedYear: Int
+  authorId: ID!    # 👈 add this
+}
+
+type Query {
+  books: [Book]
+  book(id: ID!): Book
+}
