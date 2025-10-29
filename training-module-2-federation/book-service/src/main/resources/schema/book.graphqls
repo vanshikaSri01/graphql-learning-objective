@@ -8,10 +8,15 @@ type Book @key(fields: "id") {
   id: ID!
   title: String
   publishedYear: Int
-  authorId: ID!    # 👈 add this
+  authorId: ID!
 }
 
 type Query {
-  books: [Book]
-  book(id: ID!): Book
+  getAllBooks: [Book]
+  getBookById(id: ID!): Book
+}
+
+# 👇 New Mutation Type
+type Mutation {
+  addBook(title: String!, publishedYear: Int!, authorId: ID!): Book
 }
