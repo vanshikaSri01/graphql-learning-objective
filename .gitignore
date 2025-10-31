@@ -3,6 +3,8 @@ day1/node_modules/
 day1/package-lock.json
 training-module-2-federation/federation-gateway/node_modules/
 training-module-2-federation/federation-gateway/package-lock.json
+training-module-4-authentication/gateway/node_modules/
+training-module-4-authentication/gateway/package-lock.json
 
 # Build output
 dist/
