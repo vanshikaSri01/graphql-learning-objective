@@ -1,0 +1,27 @@
+extend schema
+  @link(
+    url: "https://specs.apollo.dev/federation/v2.3",
+    import: ["@key", "@external", "@requires"]
+  )
+
+type Author @key(fields: "id") {
+  id: ID!
+  name: String
+}
+
+# Stub for Book, extended with author field
+type Book @key(fields: "id") {
+  id: ID!
+  authorId: ID! @external
+  author: Author @requires(fields: "authorId") 
+}
+
+type Query {
+  getAllAuthors: [Author]!
+  getAuthorById(id: ID!): Author
+}
+
+type Mutation {
+  addAuthor(name: String!): Author
+  deleteAuthor(id: ID!): Boolean
+}

@@ -1,0 +1,16 @@
+type Book @key(fields: "id") {
+  id: ID!
+  title: String!
+  publishedYear: Int!
+  authorId: ID!
+}
+
+type Query {
+  getAllBooks: [Book]!
+  getBookById(id: ID!): Book
+}
+
+type Mutation {
+  addBook(title: String!, publishedYear: Int!, authorId: ID!): Book
+  deleteBook(id: ID!): Boolean
+}
