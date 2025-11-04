@@ -1,0 +1,14 @@
+{
+  "d4d50ed37778e5b415efc90d1a69c1bc4f58a2807c57c9912cb1bcea33f64103": {
+    "name": "GetAllBooks",
+    "query": "query GetAllBooks { getAllBooks { id title publishedYear authorId } }"
+  },
+  "a4e3a92d0b59b318e61a09b3ef1b882bcd9e6f7aab3ef9f561f73f9c30a12b01": {
+    "name": "AddAuthor",
+    "query": "mutation AddAuthor($name: String!) { addAuthor(name: $name) { id name } }"
+  },
+  "89893a5d880548ef3e2b60d3909b60d3e6ac1dde7882c3bbf2db223aa47f49a": {
+    "name": "GetBooksWithAuthors",
+    "query": "query GetBooksWithAuthors { getAllBooks { id title author { id name } } }"
+  }
+}
